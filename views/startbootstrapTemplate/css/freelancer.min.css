@@ -163,7 +163,7 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li.active a:active,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:hover {
-    color: #fff;
+    color: black;
     background: #ffff00
 }
 
@@ -177,7 +177,7 @@ header .intro-text .skills {
 .navbar-custom .navbar-toggle:focus,
 .navbar-custom .navbar-toggle:hover {
     background-color: #ffff00;
-    color: #fff;
+    color: black;
     border-color: #ffff00
 }
 
@@ -213,7 +213,7 @@ section h2 {
 
 section.success {
     background: #ffff00;
-    color: #fff
+    color: black;
 }
 
 @media (max-width:767px) {
