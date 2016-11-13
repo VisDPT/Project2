@@ -16,7 +16,7 @@
 
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-    <link href="css/ourEdits" rel="stylesheet">
+    <link href="css/ourEdits.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -88,7 +88,7 @@
     </header> -->
 
     <!--=============== About Section ====================-->
-    <section class="success" id="about">
+    <section class="success" id="about" style="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -96,95 +96,66 @@
                     <hr class="star-light">
                 </div>
             </div>
+     
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-
+                <div class="col-lg-12">
                     <!--=========== CHECKBOXES======== -->
-                    <div class="container">
+                    <div class="container" id="checkbox">
+                        <!---ROW -->
                         <div class="row">
-                            <form>
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id="gluten" checked="checked"><span> Gluten</span>
-			</label>
-                                </fieldset>
-
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id="dairy"><span> Dairy </span>
-			</label>
-                                </fieldset>
-
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id ="eggs"><span>Eggs</span>
-			</label>
-                                </fieldset>
-
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id="soy"><span>Soy</span>
-			</label>
-                                </fieldset>
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id = "wheat"><span>Wheat</span>
-			</label>
-                                </fieldset>
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id = "fish"><span> Fish</span>
-			</label>
-                                </fieldset>
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id="shellfish"><span> Shellfish </span>
-			</label>
-                                </fieldset>
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id="treeNuts"><span> Tree Nuts </span>
-			</label>
-                                </fieldset>
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox" id="peanuts"><span> Peanuts </span>
-			</label>
-                                </fieldset>
-
-                                <fieldset>
-                                    <label class="checkbox">
-				<input type="checkbox"><span>
-
-
-                                <div class="form-group row">
-                                    <label for="example-text-input" class="col-xs-2 col-form-label" > OTHER ALLERGIES?? (KEEP or TAKE OUT?)</label>
-                                    <div class="col-xs-10">
-                                        <input class="form-control" type="text" id="example-text-input" style="width: 400px">
-                                    </div>
-                        </div>
-
-                        </span>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option1" id="gluten"> Gluten
                         </label>
-                        </fieldset>
-
-
-                        </fieldset>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option2" id="dairy"> Dairy
+                        </label>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option3" id="eggs"> Eggs
+                        </label>
+                        </div>
+                        <!--ROW -->
+                        <div class="row">
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option1" id="soy"> Soy
+                        </label>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option2" id="wheat"> Wheat
+                        </label>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option3" id="peanuts"> Peanuts
+                            </label>
+                        </div>
+                        <!---ROW -->
+                        <div class="row">
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option1" id="fish"> Fish
+                        </label>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option2" id="shellfish"> Shellfish
+                        </label>
+                            <label class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="option3" id="treeNuts"> Tree Nuts
+                            </label>
+                        </div>
+                        <!-- Input area ROW-->
+                        <div class="form-group row" id="otherAllergyArea">
+                            <label for="example-text-input" class="col-xs-2 col-form-label" id="otherAllergies"> OTHER ALLERGIES?? (KEEP or TAKE OUT?)</label>
+                            <div class="col-xs-10">
+                                <input class="form-control" type="text" id="example-text-input" style="width: 300px">
+                            </div>
+                        </div>
                         </form>
                     </div>
                 </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> SEARCH ALLERGY FRIENDLY RECIPES!
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <p>Other Allergies - separate each ingredient with a comma</p>
-            </div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-download"></i> SEARCH ALLERGY FRIENDLY RECIPES!
-                </a>
-            </div>
-        </div>
         </div>
     </section>
+
 
     <!--================= Portfolio Grid Section================ -->
     <section id="portfolio">
