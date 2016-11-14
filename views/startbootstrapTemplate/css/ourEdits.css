@@ -7,6 +7,12 @@ body {
     background-image: url(../img/crime_allergies.jpg);
 }
 
+#active {
+    color: black;
+    background: yellow;
+    border: 3px solid yellow;
+}
+
 .homeHeader {
     height: 100%;
 }
@@ -17,8 +23,8 @@ body {
 }
 
 .form-checkbox-inline {
-    font-size: 24px;
-    margin-right: 50px;
+    font-size: 22px;
+    margin-right: 40px;
     /*float: left; */
 }
 
