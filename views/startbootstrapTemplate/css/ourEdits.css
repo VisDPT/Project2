@@ -43,3 +43,15 @@ body {
 #find {
     background-color: black;
 }
+
+#userLeftSide {
+    border: 5px groove yellow;
+    height: 258px;
+    /* width: 45%;*/
+}
+
+#userRightSide {
+    border: 5px groove yellow;
+    /* width: 50%;*/
+    /*    margin-left: 5%; */
+}
