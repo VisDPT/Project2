@@ -1,5 +1,9 @@
 /* ALLIE EDITS */
 
+img {
+    border: 5px grey ridge;
+}
+
 #monkeyImage {
     height: 30%;
     width: 35%;
@@ -8,6 +12,7 @@
 
 #homeHeader {
     color: black;
+    background-color: #FFFF33;
 }
 
 #title {
