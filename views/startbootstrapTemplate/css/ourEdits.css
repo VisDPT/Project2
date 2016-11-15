@@ -3,6 +3,7 @@
 #monkeyImage {
     height: 30%;
     width: 35%;
+    border: 5px white ridge;
 }
 
 #homeHeader {
