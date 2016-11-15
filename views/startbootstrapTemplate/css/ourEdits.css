@@ -1,3 +1,15 @@
 .homeHeader {
     height: 100%;
 }
+
+
+#monkeyImage {
+	height: 50%;
+    width: 10%;
+}
+
+#register {
+	float: left;
+	margin: 0 1.5%;
+	width: 63%;
+}
