@@ -63,13 +63,11 @@ var Recipes = connection.define('recipes', {
             key: 'AllergyID'
         	}
         }, 
-        {
-        timestamps: false,
+        // timestamps: false,
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
         	// 'createAt': timestamp of record created 
         	// 'updateAt': timestamp of record updated 
-        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-        }
+        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
       });
 
 // constructor for allergy model 
@@ -93,13 +91,11 @@ var Allergy = connection.define('allergy', {
         	type: Sequelize.BOOLEAN,
         	defaultValue: false
         },
-        {
-        timestamps: false,
+        // timestamps: false,
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
         	// 'createAt': timestamp of record created 
         	// 'updateAt': timestamp of record updated 
-        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-        }
+        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
       });
 
 // constructor for users model 
@@ -130,16 +126,14 @@ var Users = connection.define('user', {
           	len: {
           		args: [3, 15],  // argument for len is to make it between 3 and 15 characters 
           		msg: "Please enter a password between 3 and 15 characters" // will display this error if args are not fulfilled
+          		}
           	}
           },
-        {
-        timestamps: false,
+        // timestamps: false,
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
         	// 'createAt': timestamp of record created 
         	// 'updateAt': timestamp of record updated 
-        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-        }
-   
+        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
       });
 
 // constructor for recipeCategory model 
@@ -152,13 +146,11 @@ var RecipeCategory = connection.define('recipeCategory', {
           type: Sequelize.STRING(30),
           allowNull: false
         },
-        {
-        timestamps: false,
+        // timestamps: false,
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
         	// 'createAt': timestamp of record created 
         	// 'updateAt': timestamp of record updated 
-        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-        }
+        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
       });
     
 // constructor for ingredients model 
@@ -199,13 +191,11 @@ var Ingredients = connection.define('ingredients', {
         Ingred09: Sequelize.STRING(30), 
         Qty10: Sequelize.STRING(8),
         Ingred10: Sequelize.STRING(30), 
-        {
-        timestamps: false,
+        // timestamps: false,
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
         	// 'createAt': timestamp of record created 
         	// 'updateAt': timestamp of record updated 
-        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-        }
+        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
       }); 
 
 // constructor for steps model 
@@ -235,13 +225,11 @@ var Steps = connection.define('steps', {
         Temp: Sequelize.INTEGER, 
         Time: Sequelize.STRING(20), 
         Yield: Sequelize.STRING(30),
-        {
-        timestamps: false,
+        //  
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
         	// 'createAt': timestamp of record created 
         	// 'updateAt': timestamp of record updated 
-        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-        }
+        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
       });
 
 // this connection is needed for two things: 
