@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Allergy Monkey</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/ourEdits.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- ================ NAVIGATION =======================-->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Allergy Monkey</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="registerLogIn.html">Register/Login</a>
+                    </li>
+                    <li>
+                        <a href="findRecipe.html">Find Recipe</a>
+                    </li>
+                    <li class="active">
+                        <a id="active" href="userProfile.html"> My Account </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!--================== HEADER ============ -->
+    <!--
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Start Bootstrap</span>
+                        <hr class="star-light">
+                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+    <!--=============== About Section ====================-->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="margin-top: 80px; ">USER PROFILE</h2>
+                    <hr class="star-primary" style="margin-bottom: 75px">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="userLeftSide">
+                    <h3 style="text-decoration: underline">WELCOME!</h3>
+                    <p> Name: </p>
+                    <p> E-mail: </p>
+                    <p> Pasword: </p>
+                </div>
+                <div class="col-md-6" id="userRightSide">
+                    <div class="container">
+                        <div class="row">
+                            <h3 style="text-decoration: underline">Your Allergies</h3>
+                        </div>
+                    </div>
+
+                    <!--=========== CHECKBOXES======== -->
+
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="gluten" id="gluten"> Gluten
+                        </label>
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="dairy" id="dairy"> Dairy
+                        </label>
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="eggs" id="eggs"> Eggs
+                        </label>
+
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="soy" id="soy"> Soy
+                        </label>
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="wheat" id="wheat"> Wheat
+                        </label>
+
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="peanuts" id="peanuts"> Peanuts
+                            </label>
+
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="fish" id="fish"> Fish
+                        </label>
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="shellfish" id="shellfish"> Shellfish
+                        </label>
+                    <label class="form-checkbox-inline">
+                            <input class="form-check-input" type="checkbox" value="treeNuts" id="treeNuts"> Tree Nuts
+                            </label>
+
+                    <!-- Input area ROW-->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="form-group row" id="otherAllergyArea">
+                                <label for="example-text-input" class="col-xs-2 col-form-label" id="otherAllergies"> OTHER </label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text" id="example-text-input" style="width: 200px; margin-left: 50px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="#portfolio" class="btn btn-lg btn-outline" id="find" style="margin-top: 75px">
+                      Make changes to my profile!
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--=================== Footer ==================-->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Monkeys With Hats 2016
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        Images from Google Images.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        Edamam API used to facilitate search results.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>

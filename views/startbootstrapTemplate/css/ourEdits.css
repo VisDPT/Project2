@@ -1,7 +1,42 @@
+/* ALLIE EDITS */
+
+img {
+    border: 5px grey ridge;
+}
+
+#monkeyImage {
+    height: 30%;
+    width: 35%;
+    border: 5px white ridge;
+}
+
+#homeHeader {
+    color: black;
+    background-color: #FFFF33;
+}
+
+#title {
+    font-size: 30px;
+}
+
+
+/* Dr. VIS EDITS */
+
+body {
+    background-image: url(../img/crime_allergies.jpg);
+}
+
+#active {
+    color: black;
+    background: yellow;
+    border: 3px solid yellow;
+}
+
 .homeHeader {
     height: 100%;
 }
 
+<<<<<<< HEAD
 
 #monkeyImage {
 	height: 50%;
@@ -12,4 +47,47 @@
 	float: left;
 	margin: 0 1.5%;
 	width: 63%;
+=======
+.checkbox {
+    float: left;
+    /* border: 4px solid black; */
+}
+
+.form-checkbox-inline {
+    font-size: 22px;
+    margin-right: 40px;
+    /*float: left; */
+}
+
+#otherAllergyArea {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+#about {
+    background-color: white;
+    opacity: .8;
+    color: black;
+    border: 3px black solid;
+}
+
+#find {
+    background-color: black;
+}
+
+#userLeftSide {
+    border: 5px groove yellow;
+    height: 258px;
+    /* width: 45%;*/
+}
+
+#userRightSide {
+    border: 5px groove yellow;
+    /* width: 50%;*/
+    /*    margin-left: 5%; */
+}
+
+.star-primary {
+    color: black;
+>>>>>>> b571d70ac6e2f0db2712f37448ee87652cf53a62
 }
