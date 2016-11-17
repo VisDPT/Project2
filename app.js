@@ -19,6 +19,9 @@ var connection = new Sequelize('FoodAllergyDB', 'root', 'testing123');
 	// 		col2: Sequelize.TEXT
 	// }); 
 
+// associate the pk and fk in tables: 
+
+
 // constructor for recipes model 
 var Recipes = connection.define('recipes', { 
         RecipeID: {
@@ -26,17 +29,43 @@ var Recipes = connection.define('recipes', {
           autoIncrement: true,
           primaryKey: true, // not null built into this 
         }, 
+        },
         RecipeName: {
-        	Sequelize.STRING(50), 
+        	type: Sequelize.STRING(50), 
         	unique: true // allows only unique string in field when the update stuff for sql runs 
         },
+        IngredID: {
+        	type: Sequelize.STRING(50), 
+        	references: {
+            	model: 'Ingredients',
+            	key: 'IngredID'
+            },
+        },
+        StepsID: {
+        	type: Sequelize.STRING(50), 
+        	references: {
+            	model: 'Steps',
+            	key: 'StepsID'
+            },	
+        },
+        
+
         CategoryID: {
           type: Sequelize.INTEGER,
-          allowNull: false
+          allowNull: false, 
+          references: {
+            model: 'RecipeCategory',
+            key: 'CategoryID'
+        	},
         }, 
         AllergyID: {
           type: Sequelize.INTEGER, 
-          allowNull: false
+          allowNull: false,
+          references: {
+            model: 'Allergy',
+            key: 'AllergyID'
+        	},
+
         }, 
         {
         timestamps: false,
@@ -52,6 +81,7 @@ var Allergy = connection.define('allergy', {
         AllergyID: {
           type: Sequelize.INTEGER, 
           allowNull: false,
+          primaryKey: true
         },
         Category: {
           type: Sequelize.STRING(20),
@@ -65,10 +95,15 @@ var AllergyCheckbox = connection.define('allergyCheckbox', {
         AllergyID: {
           type: Sequelize.INTEGER, 
           allowNull: false,
+          primaryKey: true
         },
         UserID: {
           type: Sequelize.INTEGER, 
-          allowNull: false
+          allowNull: false, 
+          references: {
+          		model: 'Users',
+           		key: 'UserID'
+       			},
         },
         AllergyCheckbox: Sequelize.BOOLEAN
       });
@@ -121,9 +156,14 @@ var RecipeCategory = connection.define('recipeCategory', {
 // constructor for ingredients model 
 var Ingredients = connection.define('ingredients', { 
 
-        RecipeID: {
+        IngredID: {
           type: Sequelize.INTEGER,
-          allowNull: false
+          allowNull: false, 
+          primaryKey: true, 
+          references: {
+            model: 'Recipes',
+            key: 'RecipeID'
+        	},
         }, 
         Qty01: {
           type: Sequelize.STRING(8),
@@ -155,23 +195,28 @@ var Ingredients = connection.define('ingredients', {
 
 // constructor for steps model 
 var Steps = connection.define('steps', { 
-        RecipeID: {
+        StepsID: {
           type: Sequelize.INTEGER, 
-          allowNull: false
+          allowNull: false,
+          primaryKey: true,
+          references: {
+            model: 'Recipes',
+            key: 'RecipeID'
+        	},
         }, 
         Steps01: {
-          type: Sequelize.STRING(30),
+          type: Sequelize.TEXT,
           allowNull: false
         },
-        Steps02: Sequelize.STRING(30),
-        Steps03: Sequelize.STRING(30),
-        Steps04: Sequelize.STRING(30),
-        Steps05: Sequelize.STRING(30),
-        Steps06: Sequelize.STRING(30),
-        Steps07: Sequelize.STRING(30),
-        Steps08: Sequelize.STRING(30),
-        Steps09: Sequelize.STRING(30),
-        Steps10: Sequelize.STRING(30),
+        Steps02: Sequelize.TEXT,
+        Steps03: Sequelize.TEXT, 
+        Steps04: Sequelize.TEXT,
+        Steps05: Sequelize.TEXT,
+        Steps06: Sequelize.TEXT,
+        Steps07: Sequelize.TEXT,
+        Steps08: Sequelize.TEXT,
+        Steps09: Sequelize.TEXT,
+        Steps10: Sequelize.TEXT,
         Temp: Sequelize.INTEGER, 
         Time: Sequelize.STRING(20), 
         Yield: Sequelize.STRING(30)
