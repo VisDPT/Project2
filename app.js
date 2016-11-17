@@ -7,7 +7,9 @@ var Sequelize = require('sequelize');
 // connecter function will return a new object which will connection the object to the db 
 // adding arguments to the connector function, Sequelize():
 	// syntax: var varName = new ConnectorName('db_name', 'yourDBuserName', 'yourDBpassword')
-var connection = new Sequelize('FoodAllergyDB', 'root', 'testing123'); 
+
+var models = require('./models');
+var connection = models.sequelize; 
 
 // define models using the sequelized db (FoodAlleryDB) that the connection above returned
 // to define the model, use the connection method. This will take two arguments: 
