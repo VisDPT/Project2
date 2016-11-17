@@ -28,7 +28,6 @@ var Recipes = connection.define('recipes', {
           type: Sequelize.INTEGER,
           autoIncrement: true,
           primaryKey: true, // not null built into this 
-        }, 
         },
         RecipeName: {
         	type: Sequelize.STRING(50), 
@@ -48,8 +47,6 @@ var Recipes = connection.define('recipes', {
             	key: 'StepsID'
             },	
         },
-        
-
         CategoryID: {
           type: Sequelize.INTEGER,
           allowNull: false, 
@@ -64,8 +61,7 @@ var Recipes = connection.define('recipes', {
           references: {
             model: 'Allergy',
             key: 'AllergyID'
-        	},
-
+        	}
         }, 
         {
         timestamps: false,
@@ -79,40 +75,39 @@ var Recipes = connection.define('recipes', {
 // constructor for allergy model 
 var Allergy = connection.define('allergy', { 
         AllergyID: {
-          type: Sequelize.INTEGER, 
+          type: Sequelize.INTEGER,
+          autoIncrement: true,  
           allowNull: false,
-          primaryKey: true
+          primaryKey: true,
+          references: {
+            model: 'Recipes',
+            key: 'RecipeID'
+        	}
         },
         Category: {
           type: Sequelize.STRING(20),
           allowNull: false
         },
-        FoodAllergy: Sequelize.STRING(30)
-      });
-
-// constructor for allergyCheckbox model
-var AllergyCheckbox = connection.define('allergyCheckbox', { 
-        AllergyID: {
-          type: Sequelize.INTEGER, 
-          allowNull: false,
-          primaryKey: true
+        FoodAllergy: Sequelize.STRING(30),
+        AllergyCheckbox: {
+        	type: Sequelize.BOOLEAN,
+        	defaultValue: false
         },
-        UserID: {
-          type: Sequelize.INTEGER, 
-          allowNull: false, 
-          references: {
-          		model: 'Users',
-           		key: 'UserID'
-       			},
-        },
-        AllergyCheckbox: Sequelize.BOOLEAN
+        {
+        timestamps: false,
+        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
+        	// 'createAt': timestamp of record created 
+        	// 'updateAt': timestamp of record updated 
+        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
+        }
       });
 
 // constructor for users model 
 var Users = connection.define('user', { 
         UserID: {
           type: Sequelize.INTEGER,
-          allowNull: false
+          allowNull: false,
+          primaryKey: true
         },
         FirstName: {
           type: Sequelize.STRING(20), 
@@ -136,8 +131,14 @@ var Users = connection.define('user', {
           		args: [3, 15],  // argument for len is to make it between 3 and 15 characters 
           		msg: "Please enter a password between 3 and 15 characters" // will display this error if args are not fulfilled
           	}
-          }
-        },
+          },
+        {
+        timestamps: false,
+        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
+        	// 'createAt': timestamp of record created 
+        	// 'updateAt': timestamp of record updated 
+        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
+        }
    
       });
 
@@ -150,6 +151,13 @@ var RecipeCategory = connection.define('recipeCategory', {
         RecipeCategory: {
           type: Sequelize.STRING(30),
           allowNull: false
+        },
+        {
+        timestamps: false,
+        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
+        	// 'createAt': timestamp of record created 
+        	// 'updateAt': timestamp of record updated 
+        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
         }
       });
     
@@ -190,7 +198,14 @@ var Ingredients = connection.define('ingredients', {
         Qty09: Sequelize.STRING(8),
         Ingred09: Sequelize.STRING(30), 
         Qty10: Sequelize.STRING(8),
-        Ingred10: Sequelize.STRING(30)
+        Ingred10: Sequelize.STRING(30), 
+        {
+        timestamps: false,
+        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
+        	// 'createAt': timestamp of record created 
+        	// 'updateAt': timestamp of record updated 
+        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
+        }
       }); 
 
 // constructor for steps model 
@@ -219,7 +234,14 @@ var Steps = connection.define('steps', {
         Steps10: Sequelize.TEXT,
         Temp: Sequelize.INTEGER, 
         Time: Sequelize.STRING(20), 
-        Yield: Sequelize.STRING(30)
+        Yield: Sequelize.STRING(30),
+        {
+        timestamps: false,
+        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
+        	// 'createAt': timestamp of record created 
+        	// 'updateAt': timestamp of record updated 
+        freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
+        }
       });
 
 // this connection is needed for two things: 
