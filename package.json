@@ -1,0 +1,25 @@
+{
+  "name": "Project2",
+  "version": "1.0.0",
+  "description": "Project2",
+  "main": "index.js",
+  "dependencies": {
+    "mysql": "^2.12.0",
+    "sequelize": "^3.25.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VisDPT/Project2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VisDPT/Project2/issues"
+  },
+  "homepage": "https://github.com/VisDPT/Project2#readme"
+}
