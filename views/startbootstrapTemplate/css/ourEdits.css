@@ -1,7 +1,26 @@
 /* ALLIE EDITS */
 
+img {
+    border: 5px grey ridge;
+}
 
-/* VIS EDITS */
+#monkeyImage {
+    height: 30%;
+    width: 35%;
+    border: 5px white ridge;
+}
+
+#homeHeader {
+    color: black;
+    background-color: #FFFF33;
+}
+
+#title {
+    font-size: 30px;
+}
+
+
+/* Dr. VIS EDITS */
 
 body {
     background-image: url(../img/crime_allergies.jpg);
@@ -54,4 +73,8 @@ body {
     border: 5px groove yellow;
     /* width: 50%;*/
     /*    margin-left: 5%; */
+}
+
+.star-primary {
+    color: black;
 }

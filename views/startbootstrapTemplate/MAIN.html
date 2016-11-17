@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>ALLERGY MONKEY</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,11 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top" class="index">
-
     <!-- ================ NAVIGATION =======================-->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -45,24 +43,19 @@
                 <a class="navbar-brand" href="#page-top">Allergy Monkey</a>
             </div>
 
-
-
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a href="registerLogIn.html">Register/Login</a>
+
+                    <li class="page-scroll">
+                        <a href="#about">Find Recipe</a>
                     </li>
-                    <li class="active">
-                        <a id="active" href="findRecipe.html">Find Recipe</a>
-                    </li>
-                    <li>
+                    <!-- <li>
                         <a href="userProfile.html"> My Account </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -70,21 +63,38 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <!-- ====================== HEADER ================= -->
+    <header id="homeHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/monkeyimage.png" id="monkeyImage" alt="">
+                    <div class="intro-text">
+                        <span class="name" id="title">Allergy Monkey Recipe Finder</span>
+                        <p style="font-weight:bold; text-decoration: underline"> TEAM: Monkeys With Hats</p>
+                        <p style="font-weight:bold;"> Group Members: Del, Sam, Vis, Allie, Freddy </p>
+                        <hr class="star-light" style="color: black;">
+                        <p> If you are searching for allergy-friendly recipes that won't wreck havoc on your health, you have come to the right place! Please click on the find recipe button above to start! Soon you will be well on your way to finding allergy-friendly
+                            foods for you. Thank you for visiting our website. </p>
+                        <p>~George, the Monkey with a Hat</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <!--=============== About Section ====================-->
+    <!--=============== RECIPE FINDER BOX ====================-->
     <section class="success" id="about" style="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 style="margin-top: 80px">Allergy Recipe Finder</h2>
+                    <h2 style="margin-top: 80px; font-size: 60px">Allergy Recipe Finder</h2>
                     <hr class="star-primary">
                 </div>
             </div>
-
-
-
             <!--=========== CHECKBOXES======== -->
-            <div class="col-lg-12 text-center">
+            <form class="col-lg-12 text-center">
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="gluten" id="gluten"> Gluten
                         </label>
@@ -94,18 +104,15 @@
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="eggs" id="eggs"> Eggs
                         </label>
-
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="soy" id="soy"> Soy
                         </label>
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="wheat" id="wheat"> Wheat
                         </label>
-
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="peanuts" id="peanuts"> Peanuts
                             </label>
-
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="fish" id="fish"> Fish
                         </label>
@@ -115,8 +122,8 @@
                 <label class="form-checkbox-inline">
                             <input class="form-check-input" type="checkbox" value="treeNuts" id="treeNuts"> Tree Nuts
                             </label>
-                <div>
-                    <!-- Input area ROW-->
+            </form>
+            <!-- Input area ROW
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="form-group row" id="otherAllergyArea">
@@ -126,26 +133,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <a href="#portfolio" class="btn btn-lg btn-outline" id="find">
-                            <i class="fa fa-download"></i> FIND ALLERGY FRIENDLY RECIPES!
-                        </a>
-
-                    </div>
-
-                </div>
+                    </div> -->
+            <!-- BUTTON -->
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="#portfolio" class="btn btn-lg btn-outline" id="find">
+                    <i class="fa fa-download"></i> FIND ALLERGY FRIENDLY RECIPES!
+                </a>
+            </div>
+        </div>
     </section>
-
 
     <!--================= Portfolio Grid Section================ -->
     <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2> RECIPES YOU CAN ENJOY!</h2>
+                    <h2 style="color:black; font-size:60px; font-weight:bold"> RECIPES YOU CAN ENJOY!</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -157,7 +160,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -167,7 +170,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -177,7 +180,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -187,7 +190,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -197,7 +200,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -207,7 +210,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -217,7 +220,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -227,7 +230,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -237,7 +240,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                        <img src="img/modalMonkey.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
             </div>
