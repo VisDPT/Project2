@@ -1,18 +1,18 @@
 "use strict"; 
 
 module.exports = function(sequelize, DataTypes){
-var Recipes = connection.define('Recipes', { 
+var Recipes = sequelize.define('Recipes', { 
         RecipeID: {
-          type: Sequelize.INTEGER,
+          type: DataTypes.INTEGER,
           autoIncrement: true,
           primaryKey: true, // not null built into this 
         },
         RecipeName: {
-          type: Sequelize.STRING(50), 
+          type: DataTypes.STRING(50), 
           unique: true // allows only unique string in field when the update stuff for sql runs 
         },
         IngredID: {
-          type: Sequelize.STRING(50), 
+          type: DataTypes.STRING(50), 
           references: {
               model: 'Ingredients',
               key: 'IngredID'
@@ -21,7 +21,7 @@ var Recipes = connection.define('Recipes', {
           onDelete: 'cascade'            
         },
         StepsID: {
-          type: Sequelize.STRING(50), 
+          type: DataTypes.STRING(50), 
           references: {
               model: 'Steps',
               key: 'StepsID'
@@ -30,7 +30,7 @@ var Recipes = connection.define('Recipes', {
           onDelete: 'cascade'            
         },
         CategoryID: {
-          type: Sequelize.INTEGER,
+          type: DataTypes.INTEGER,
           allowNull: false, 
           references: {
             model: 'RecipeCategory',
@@ -40,7 +40,7 @@ var Recipes = connection.define('Recipes', {
           onDelete: 'cascade'         
         }, 
         AllergyID: {
-          type: Sequelize.INTEGER, 
+          type: DataTypes.INTEGER, 
           allowNull: false,
           references: {
             model: 'Allergy',

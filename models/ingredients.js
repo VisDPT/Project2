@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
 
-    var Ingredients = connection.define('Ingredients', {
+    var Ingredients = sequelize.define('Ingredients', {
 
             IngredID: {
                 type: DataTypes.INTEGER,

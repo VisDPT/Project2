@@ -1,7 +1,7 @@
 "use strict"; 
 
 module.exports = function(sequelize, DataTypes){
-var Users = connection.define('User', { 
+var Users = sequelize.define('User', { 
         UserID: {
           type: Sequelize.INTEGER,
           allowNull: false,
