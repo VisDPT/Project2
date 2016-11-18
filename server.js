@@ -28,11 +28,13 @@ app.use(express.static('app/public'));
 // Routes
 // =============================================================
 
-require("./app/routes/api-routes.js")(app)
-require("./app/routes/html-routes.js")(app)
-
-
-
+require("./controllers/application_controller")(app)
+require("./controllers/Recipes_controller")(app)
+require("./controllers/Users_controller")(app)
+require("./controllers/Allergies_controller")(app)
+require("./controllers/RecipeCategories_controller")(app)
+require("./controllers/Ingredients_controller")(app)
+require("./controllers/Steps_controller")(app)
 
 // Starts the server to begin listening 
 // =============================================================
