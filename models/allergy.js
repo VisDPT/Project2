@@ -23,11 +23,13 @@ var Allergy = connection.define('Allergy', {
         	type: Sequelize.BOOLEAN,
         	defaultValue: false
         },
-        // timestamps: false,
-        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
-        	// 'createAt': timestamp of record created 
-        	// 'updateAt': timestamp of record updated 
-        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
+        classMethods: {
+            associate: function(models) {
+              Allergy.belongsToMany(models.Recipe, {
+                through: 'AllergyRecipe'
+                }
+              }
+        }
       });
       return Allergy;
       }

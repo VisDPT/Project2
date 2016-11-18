@@ -29,11 +29,12 @@ var Steps = connection.define('Steps', {
         Temp: Sequelize.INTEGER, 
         Time: Sequelize.STRING(20), 
         Yield: Sequelize.STRING(30),
-        //  
-        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
-        	// 'createAt': timestamp of record created 
-        	// 'updateAt': timestamp of record updated 
-        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-      });
+        classMethod: {
+        	associate: function(models) {
+       			Steps.hasOne(models.Recipe);
+        }
+     }
+   }
+ });
       return Steps;
 }

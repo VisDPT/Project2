@@ -41,12 +41,12 @@ var Ingredients = connection.define('Ingredients', {
         Ingred09: Sequelize.STRING(30), 
         Qty10: Sequelize.STRING(8),
         Ingred10: Sequelize.STRING(30), 
-        // timestamps: false,
-        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
-        	// 'createAt': timestamp of record created 
-        	// 'updateAt': timestamp of record updated 
-        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
-      }); 
+        classMethod: {
+          associate: function(models) {
+            Ingredients.hasOne(models.Recipe);
+        }
+     }
+   }
+ });
       return Ingredients;
 }
-Add Comment

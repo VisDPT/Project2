@@ -49,11 +49,12 @@ var Recipes = connection.define('Recipes', {
           onUpdate: 'cascade',
           onDelete: 'cascade'         
         }, 
-        // timestamps: false,
-        // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
-          // 'createAt': timestamp of record created 
-          // 'updateAt': timestamp of record updated 
-        // freezeTableName: true // sequelize automatically puralizes table names, this will prevent that from happening
+        classMethods: {
+             associate: function(models) {
+              Recipe.belongsToMany(models.Allergy, {through: 'RecipeAllergy'})
+              }
+            }
+        }
       });
       return Recipes;
 }
