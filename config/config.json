@@ -3,7 +3,7 @@
     "username": "root",
     "password": "testing123",
     "database": "FoodAllergyDB",
-    "host": "127.0.0.1",
+    "host": "localhosts",
     "dialect": "mysql"
   },
   "test": {
