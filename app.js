@@ -39,13 +39,17 @@ var Recipes = connection.define('recipes', {
             	model: 'Ingredients',
             	key: 'IngredID'
             },
+          onUpdate: 'cascade',
+          onDelete: 'cascade'            
         },
         StepsID: {
         	type: Sequelize.STRING(50), 
         	references: {
             	model: 'Steps',
             	key: 'StepsID'
-            },	
+            },
+          onUpdate: 'cascade',
+          onDelete: 'cascade'            
         },
         CategoryID: {
           type: Sequelize.INTEGER,
@@ -54,6 +58,8 @@ var Recipes = connection.define('recipes', {
             model: 'RecipeCategory',
             key: 'CategoryID'
         	},
+          onUpdate: 'cascade',
+          onDelete: 'cascade'        	
         }, 
         AllergyID: {
           type: Sequelize.INTEGER, 
@@ -61,7 +67,9 @@ var Recipes = connection.define('recipes', {
           references: {
             model: 'Allergy',
             key: 'AllergyID'
-        	}
+        	},
+          onUpdate: 'cascade',
+          onDelete: 'cascade'        	
         }, 
         // timestamps: false,
         // ^^^ NEED THIS ^^^ without this, sequelize will create additional columns called 'createAt' and 'updateAt'
@@ -80,7 +88,9 @@ var Allergy = connection.define('allergy', {
           references: {
             model: 'Recipes',
             key: 'RecipeID'
-        	}
+        	},
+          onUpdate: 'cascade',
+          onDelete: 'cascade'        	
         },
         Category: {
           type: Sequelize.STRING(20),
@@ -164,6 +174,8 @@ var Ingredients = connection.define('ingredients', {
             model: 'Recipes',
             key: 'RecipeID'
         	},
+          onUpdate: 'cascade',
+          onDelete: 'cascade'        	
         }, 
         Qty01: {
           type: Sequelize.STRING(8),
@@ -208,6 +220,8 @@ var Steps = connection.define('steps', {
             model: 'Recipes',
             key: 'RecipeID'
         	},
+          onUpdate: 'cascade',
+          onDelete: 'cascade'
         }, 
         Steps01: {
           type: Sequelize.TEXT,
