@@ -1,6 +1,6 @@
-"use strict";
-
-module.exports = function(sequelize, DataTypes) {
+//Allergy.js under models: --- it works
+"use strict ";
+module.exports = function(sequelize, DataTypes) { 
     var Allergy = sequelize.define('Allergy', {
         //2nd DEBUG: connection.define changed to sequelize.define
         AllergyID: {
@@ -16,25 +16,32 @@ module.exports = function(sequelize, DataTypes) {
                 model: 'Recipes',
                 key: 'RecipeID'
             },
-            onUpdate: 'cascade',
-            onDelete: 'cascade'
-        },
-        Category: {
-            type: DataTypes.STRING(20),
-            allowNull: false
-        },
-        FoodAllergy: DataTypes.STRING(30),
-        AllergyCheckbox: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false
-        },
-        classMethods: {
-            associate: function(models) {
-                Allergy.belongsToMany(models.Recipe, {
-                        through: 'AllergyRecipe'
-                    }) //1st debug: missing ) --FIXED
+                onUpdate: 'cascade',
+                onDelete: 'cascade'
+            },
+            Category: {
+                type: DataTypes.STRING(20),
+                allowNull: false
+            },
+            FoodAllergy: DataTypes.STRING(30),
+            AllergyCheckbox: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: false
+            },
+            /*classMethods: {
+                associate: function(models) {
+                    Allergy.belongsTo(models.Recipes, {
+                        foreignKey: 'AllergyID'
+                    });
+                },
+            }*/
+            classMethods: {
+                associate: function(models) {
+                    Allergy.belongsToMany(models.Recipes, {
+                        through: 'AllergyRecipes'
+                    })
+                }
             }
-        }
-    });
-    return Allergy;
-}
+    })        
+return Allergy;
+};

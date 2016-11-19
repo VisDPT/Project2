@@ -1,5 +1,4 @@
-"use strict"; 
-
+"use strict";
 module.exports = function(sequelize, DataTypes) {
     var Recipes = sequelize.define('Recipes', {
             RecipeID: {
@@ -29,16 +28,6 @@ module.exports = function(sequelize, DataTypes) {
                 onUpdate: 'cascade',
                 onDelete: 'cascade'
             },
-            CategoryID: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-                references: {
-                    model: 'RecipeCategory',
-                    key: 'CategoryID'
-                },
-                onUpdate: 'cascade',
-                onDelete: 'cascade'
-            },
             AllergyID: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
@@ -51,10 +40,10 @@ module.exports = function(sequelize, DataTypes) {
             },
             classMethods: {
                 associate: function(models) {
-                    Recipes.belongsToMany(models.Allergy, { through: 'RecipeAllergy' })
+                    //Recipes.belongsTo(models.Allergy, { foreignKey:'AllergyID'} );
+                    Recipes.belongsToMany(models.Allergy, { through: 'RecipesAllergy' })
                 }
             }
-        }
-    });
-return Recipes;
-}
+        })
+    return Recipes;
+    };

@@ -1,5 +1,4 @@
 "use strict";
-
 module.exports = function(sequelize, DataTypes) {
     var Steps = sequelize.define('Steps', {
             StepsID: {
@@ -31,10 +30,10 @@ module.exports = function(sequelize, DataTypes) {
             Yield: DataTypes.STRING(30),
             classMethod: {
                 associate: function(models) {
+                    //Steps.belongsTo(models.Recipe, { foreignKey:'StepsID'} );
                     Steps.hasOne(models.Recipes);
                 }
             }
-        }
-    });
-return Steps;
-}
+        })
+    return Steps;
+    };
