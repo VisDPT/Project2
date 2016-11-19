@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
             Yield: DataTypes.STRING(30),
             classMethod: {
                 associate: function(models) {
-                    Steps.hasOne(models.Recipe);
+                    Steps.hasOne(models.Recipes);
                 }
             }
         }

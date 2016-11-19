@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; 
 
 module.exports = function(sequelize, DataTypes) {
     var Recipes = sequelize.define('Recipes', {
@@ -51,7 +51,7 @@ module.exports = function(sequelize, DataTypes) {
             },
             classMethods: {
                 associate: function(models) {
-                    Recipe.belongsToMany(models.Allergy, { through: 'RecipeAllergy' })
+                    Recipes.belongsToMany(models.Allergy, { through: 'RecipeAllergy' })
                 }
             }
         }
