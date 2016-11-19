@@ -6,7 +6,7 @@
 // =============================================================
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var exphbs = require('express-handlebars');
 
 
 
@@ -28,6 +28,10 @@ app.use(express.static('app/public'));
 // Routes
 // =============================================================
 
+// this is broken: 
+app.get('handlebars', exphbs({
+    defaultLayout: 'MAIN'
+}));
 
 
 

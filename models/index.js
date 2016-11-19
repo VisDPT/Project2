@@ -26,6 +26,13 @@ fs
 //   }
 // ////possible debug code above?
 
+var exphbs = require('express-handlebars');
+app.get('handlebars', exphbs({
+    defaultLayout: 'MAIN'
+}));
+app.set('view engine', 'handlebars');
+
+
 Object.keys(db).forEach(function(modelName) {
     if ("associate" in db[modelName]) {
         db[modelName].associate(db);
