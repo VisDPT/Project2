@@ -1,11 +1,11 @@
 'use strict';
 
-// primary and foreign keys setup: 
-var allery_fk = this.sequelize.define('allergy', {AllergyID: Sequelize.INTEGER})
+// // primary and foreign keys setup: 
+// var allery_fk = this.sequelize.define('allergy', {AllergyID: Sequelize.INTEGER})
  
-allery_fk.belongsTo(ID_pk)
-// reference for above: 
-// http://docs.sequelizejs.com/en/1.7.0/docs/associations/#foreign-keys
+// allery_fk.belongsTo(ID_pk)
+// // reference for above: 
+// // http://docs.sequelizejs.com/en/1.7.0/docs/associations/#foreign-keys
 
 module.exports = {
   up: function (queryInterface, Sequelize) {

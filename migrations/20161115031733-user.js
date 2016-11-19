@@ -1,6 +1,6 @@
 'use strict';
 
-var ID_pk = this.sequelize.define('recipes', { RecipeID: Sequelize.INTEGER }),
+// var ID_pk = this.sequelize.define('recipes', { RecipeID: Sequelize.INTEGER }),
 
 
 module.exports = {
