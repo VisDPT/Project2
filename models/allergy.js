@@ -1,47 +1,39 @@
-//Allergy.js under models: --- it works
-"use strict ";
-module.exports = function(sequelize, DataTypes) { 
-    var Allergy = sequelize.define('Allergy', {
-        //2nd DEBUG: connection.define changed to sequelize.define
-        AllergyID: {
-            //3rd DEBUG: Sequelize.__________ changed to DataTypes.__________;  Because var Sequelize is not defined anywhere, there were errors being thrown with that; In the cats example, DataTypes.______ were used I believe for that reason
-            //If you want to do Sequelize._____________, see this example http://stackoverflow.com/questions/33138603/expressjs-sequelize-unrecognized-data-type
-            //my hypothesis is we may need to define it and then use it bc the current error im thinking is bc it does not like the DataTypes
-            //http://docs.sequelizejs.com/en/latest/api/datatypes/
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            allowNull: false,
-            primaryKey: true,
-            references: {
-                model: 'Recipes',
-                key: 'RecipeID'
-            },
+"use strict";
+module.exports = function(sequelize, DataTypes) {
+    var Steps = sequelize.define('Steps', {
+            StepsID: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                primaryKey: true,
+                references: {
+                    model: 'Recipes',
+                    key: 'RecipeID'
+                },
                 onUpdate: 'cascade',
                 onDelete: 'cascade'
             },
-            Category: {
-                type: DataTypes.STRING(20),
+            Steps01: {
+                type: DataTypes.TEXT,
                 allowNull: false
             },
-            FoodAllergy: DataTypes.STRING(30),
-            AllergyCheckbox: {
-                type: DataTypes.BOOLEAN,
-                defaultValue: false
-            },
-            /*classMethods: {
+            Steps02: DataTypes.TEXT,
+            Steps03: DataTypes.TEXT,
+            Steps04: DataTypes.TEXT,
+            Steps05: DataTypes.TEXT,
+            Steps06: DataTypes.TEXT,
+            Steps07: DataTypes.TEXT,
+            Steps08: DataTypes.TEXT,
+            Steps09: DataTypes.TEXT,
+            Steps10: DataTypes.TEXT,
+            Temp: DataTypes.INTEGER,
+            Time: DataTypes.STRING(20),
+            Yield: DataTypes.STRING(30),
+            classMethod: {
                 associate: function(models) {
-                    Allergy.belongsTo(models.Recipes, {
-                        foreignKey: 'AllergyID'
-                    });
-                },
-            }*/
-            classMethods: {
-                associate: function(models) {
-                    Allergy.belongsToMany(models.Recipes, {
-                        through: 'AllergyRecipes'
-                    })
+                    //Steps.belongsTo(models.Recipe, { foreignKey:'StepsID'} );
+                    Steps.hasOne(models.Recipes);
                 }
             }
-    })        
-return Allergy;
-};
+        })
+    return Steps;
+    };
