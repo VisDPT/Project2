@@ -28,12 +28,15 @@ app.use(express.static('app/public'));
 // Routes
 // =============================================================
 
-// this is broken: 
-app.get('handlebars', exphbs({
-    defaultLayout: 'MAIN'
-}));
+// // this is broken: 
+// app.get('handlebars', exphbs({
+//     defaultLayout: 'MAIN'
+// }));
 
 
+app.get('/views/startbootstrapTemplate/MAIN', function (req,res) {
+	res.render('index', {});
+});
 
 
 
