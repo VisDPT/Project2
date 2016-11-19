@@ -27,14 +27,16 @@ module.exports = function(sequelize, DataTypes) {
         AllergyCheckbox: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
-        },
+        }
+    }, {
         classMethods: {
             associate: function(models) {
-                Allergy.belongsToMany(models.Recipe, {
+                Allergy.belongsToMany(models.Recipes, {
                         through: 'AllergyRecipe'
                     }) //1st debug: missing ) --FIXED
             }
         }
+
     });
     return Allergy;
 }
