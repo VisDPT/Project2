@@ -1,4 +1,4 @@
-"use strict";
+f"use strict";
 
 module.exports = function(sequelize, DataTypes) {
     var Steps = sequelize.define('Steps', {
